@@ -48,7 +48,7 @@ class Fab extends React.Component {
         { 
           translateY: this.animation.interpolate({
             inputRange: [0, 1],
-            outputRange: [0, -55],
+            outputRange: [0, -75],
           })
         }
       ]
@@ -59,7 +59,7 @@ class Fab extends React.Component {
         { 
           translateY: this.animation.interpolate({
             inputRange: [0, 1],
-            outputRange: [0, -105]
+            outputRange: [0, -125]
           }) 
         }
       ]
@@ -69,7 +69,7 @@ class Fab extends React.Component {
       let output = 0;
       return this.props.actions.map((item, index) => {
         if(index > 0 ){
-          output = output - 55;
+          output = output - 75;
           return (
             <Animated.View key={index} style={[styles.button, {backgroundColor: item.color}, styles.small, {
               transform: [
